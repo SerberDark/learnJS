@@ -1,3 +1,8 @@
+// Задача 1
+// Реализовать функцию, которая находит разницу в массивах и возвращает ее
+// Порядрк возвращаемых элментов не важен
+
+//1 способ
 function arrayDifference(arr1, arr2) {
   const result = []
   arr1.forEach((i) => {
@@ -7,6 +12,10 @@ function arrayDifference(arr1, arr2) {
     if (!arr1.includes(i)) result.push(i)
   })
   return result
+}
+//2 способ
+function arrayDifference(arr1, arr2) {
+  return arr1.concat(arr2).filter((i) => !arr1.includes(i) || !arr2.includes(i))
 }
 
 console.log(
